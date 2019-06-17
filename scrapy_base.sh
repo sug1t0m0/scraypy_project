@@ -1,9 +1,9 @@
 #!/bin/sh
 
-docker build -t scrapy-base-app .
+docker build -t hotmot-scrapy .
 
 docker run -itd -v $(pwd)/app:/usr/src/app \
---name scrapy-base-app \
-scrapy-base-app
+--name hotmot-scraping-app \
+hotmot-scrapy
 
-docker exec -it scrapy-base-app scrapy startproject scraping .
+docker exec -it hotmot-scraping-app scrapy startproject hotmot_scraping .
